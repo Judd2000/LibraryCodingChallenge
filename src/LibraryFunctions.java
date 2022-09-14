@@ -56,18 +56,14 @@ public class LibraryFunctions {
             //If we are only doing 1 iteration, no math is required.
             return fibonacciNumbers[0];
 
-        } else if (numIterations < 1){
-            //Not necessary, but if they try to put in a 0, it will tell the user.
-            System.out.println("Please try again with a number 1 or higher.");
-            return -1;
-
         } else {
 
             for(int i = 1; i < numIterations; i++){
 
                 if(i == 1){
-                    //For the second iteration, we simply add 0 to our first iteration.
-                    fibonacciNumbers[i] = 0 + fibonacciNumbers[0];
+                    //For the second iteration, we simply add 0 to our first iteration, which yields the
+                    // first iteration.
+                    fibonacciNumbers[i] = fibonacciNumbers[0];
 
                 } else{
                     //Using our array, we add the last two indexes together to compute the next fibonacci number.
